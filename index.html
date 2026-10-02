@@ -1,0 +1,2244 @@
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUSE &amp; MINT CAFÉ — Coffee, Conversations &amp; Good Things | Jubilee Hills, Hyderabad</title>
+<meta name="description" content="MUSE & MINT CAFÉ — a contemporary neighbourhood café in Jubilee Hills, Hyderabad serving specialty coffee, fresh bakes, comforting plates and a little inspiration with every cup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ivory: '#F7F1E7',
+          paper: '#FCF8F2',
+          cream: '#EFE3D0',
+          forest: '#14342A',
+          forest2: '#1D4A38',
+          terra: '#C2643F',
+          terraLight: '#D98A66',
+          espresso: '#2B1C14',
+          brass: '#C29B54'
+        },
+        fontFamily: {
+          display: ['Fraunces', 'Georgia', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html.js .reveal { opacity: 0; transform: translateY(28px); }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: #F7F1E7;
+    color: #2B1C14;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  section { scroll-margin-top: 92px; }
+  ::selection { background: #14342A; color: #F7F1E7; }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal {
+    transition: opacity .95s cubic-bezier(.19,1,.22,1), transform .95s cubic-bezier(.19,1,.22,1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible { opacity: 1 !important; transform: none !important; }
+
+  /* ---------- Kinetic words ---------- */
+  .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(0.75em) rotate(2deg);
+    transition: opacity .9s cubic-bezier(.19,1,.22,1), transform .9s cubic-bezier(.19,1,.22,1);
+  }
+  .split-ready .word.is-in { opacity: 1; transform: none; }
+  .italic { font-style: italic; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    letter-spacing: .14em;
+    transition: transform .45s cubic-bezier(.19,1,.22,1), box-shadow .45s ease, color .35s ease, background-color .4s ease, border-color .4s ease;
+    will-change: transform;
+  }
+  .btn:hover { transform: translateY(-3px); }
+  .btn:active { transform: translateY(0) scale(.98); }
+  .btn-sweep::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(115deg, transparent 20%, rgba(255,255,255,.38) 48%, transparent 76%);
+    transform: translateX(-120%);
+    transition: transform .8s cubic-bezier(.19,1,.22,1);
+  }
+  .btn-sweep:hover::after { transform: translateX(120%); }
+
+  /* ---------- Hero ---------- */
+  .hero-media {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    transform: scale(1.06);
+    animation: heroDrift 26s ease-in-out infinite alternate;
+  }
+  @keyframes heroDrift {
+    from { transform: scale(1.06) translate3d(0,0,0); }
+    to   { transform: scale(1.16) translate3d(-1.5%, -1.5%, 0); }
+  }
+  .grain::before {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none;
+    opacity: .22;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  }
+  .status-dot {
+    width: 9px; height: 9px; border-radius: 999px; background: #7BE0A6;
+    box-shadow: 0 0 0 0 rgba(123,224,166,.8);
+    animation: pulseDot 2.2s infinite;
+  }
+  @keyframes pulseDot {
+    0% { box-shadow: 0 0 0 0 rgba(123,224,166,.75); }
+    70% { box-shadow: 0 0 0 12px rgba(123,224,166,0); }
+    100% { box-shadow: 0 0 0 0 rgba(123,224,166,0); }
+  }
+
+  /* ---------- Marquee ---------- */
+  .marquee { display: flex; width: max-content; animation: slide 38s linear infinite; }
+  .marquee:hover { animation-play-state: paused; }
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ---------- Cards ---------- */
+  .img-card { overflow: hidden; position: relative; }
+  .img-card img {
+    transition: transform 1.1s cubic-bezier(.19,1,.22,1), filter .7s ease;
+    will-change: transform;
+  }
+  .img-card:hover img { transform: scale(1.09); }
+  .soft-shadow { box-shadow: 0 22px 50px -28px rgba(43,28,20,.35); }
+  .lift { transition: transform .55s cubic-bezier(.19,1,.22,1), box-shadow .55s ease, background-color .5s ease, border-color .5s ease; }
+  .lift:hover { transform: translateY(-8px); box-shadow: 0 32px 60px -30px rgba(20,52,42,.45); }
+
+  .chip {
+    transition: background-color .35s ease, color .35s ease, border-color .35s ease, transform .35s ease;
+  }
+  .chip:hover { transform: translateY(-2px); }
+  .chip.active { background: #14342A; color: #F7F1E7; border-color: #14342A; }
+
+  /* ---------- Menu grid ---------- */
+  .menu-item {
+    transition: opacity .5s ease, transform .5s cubic-bezier(.19,1,.22,1);
+  }
+  .menu-item.hide {
+    opacity: 0;
+    transform: scale(.96) translateY(10px);
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  /* ---------- Experience rows ---------- */
+  .exp-row { position: relative; overflow: hidden; transition: color .5s ease; }
+  .exp-row .exp-bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    opacity: 0; transform: scale(1.12);
+    transition: opacity .7s cubic-bezier(.19,1,.22,1), transform 1s cubic-bezier(.19,1,.22,1);
+  }
+  .exp-row:hover .exp-bg, .exp-row.open .exp-bg { opacity: 1; transform: scale(1); }
+  .exp-row:hover, .exp-row.open { color: #F7F1E7; }
+  .exp-row .exp-detail {
+    max-height: 0; opacity: 0; overflow: hidden;
+    transition: max-height .6s cubic-bezier(.19,1,.22,1), opacity .5s ease, margin .5s ease;
+  }
+  .exp-row:hover .exp-detail, .exp-row.open .exp-detail { max-height: 140px; opacity: 1; margin-top: 14px; }
+  .exp-num { transition: color .5s ease, transform .6s cubic-bezier(.19,1,.22,1); }
+  .exp-row:hover .exp-num, .exp-row.open .exp-num { color: #C29B54; transform: translateX(6px); }
+
+  /* ---------- Gallery ---------- */
+  .masonry { column-count: 1; column-gap: 18px; }
+  @media (min-width: 640px) { .masonry { column-count: 2; } }
+  @media (min-width: 1024px) { .masonry { column-count: 3; } }
+  .masonry figure {
+    break-inside: avoid;
+    margin-bottom: 18px;
+    cursor: zoom-in;
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+  }
+  .masonry figure img { transition: transform 1s cubic-bezier(.19,1,.22,1), filter .6s ease; width: 100%; display: block; }
+  .masonry figure:hover img { transform: scale(1.08); filter: saturate(1.12); }
+  .masonry figcaption {
+    position: absolute; left: 16px; bottom: 16px;
+    color: #FCF8F2; font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+    opacity: 0; transform: translateY(10px);
+    transition: opacity .45s ease, transform .45s ease;
+  }
+  .masonry figure:hover figcaption { opacity: 1; transform: none; }
+
+  /* ---------- Lightbox ---------- */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 120;
+    background: rgba(20,32,27,.92);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; visibility: hidden;
+    transition: opacity .45s ease, visibility .45s ease;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+  }
+  .lightbox.open { opacity: 1; visibility: visible; }
+  .lightbox img {
+    max-width: min(1100px, 92vw); max-height: 82vh;
+    border-radius: 18px;
+    transform: scale(.94);
+    transition: transform .55s cubic-bezier(.19,1,.22,1);
+    object-fit: contain;
+  }
+  .lightbox.open img { transform: scale(1); }
+
+  /* ---------- Nav ---------- */
+  #navbar {
+    transition: background-color .5s ease, box-shadow .5s ease, padding .5s ease, border-color .5s ease, backdrop-filter .5s ease;
+  }
+  #navbar.scrolled {
+    background: rgba(252,248,242,.93);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 12px 36px -26px rgba(43,28,20,.55);
+    border-bottom: 1px solid rgba(43,28,20,.09);
+  }
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ""; position: absolute; left: 0; bottom: -5px;
+    height: 1.5px; width: 100%;
+    background: currentColor;
+    transform: scaleX(0); transform-origin: right;
+    transition: transform .45s cubic-bezier(.19,1,.22,1);
+  }
+  .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); transform-origin: left; }
+
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 110;
+    background: #14342A;
+    clip-path: circle(0% at calc(100% - 42px) 42px);
+    transition: clip-path .75s cubic-bezier(.76,0,.24,1);
+    pointer-events: none;
+  }
+  .mobile-menu.open { clip-path: circle(155% at calc(100% - 42px) 42px); pointer-events: auto; }
+  .mobile-menu a {
+    opacity: 0; transform: translateY(22px);
+    transition: opacity .5s ease, transform .5s cubic-bezier(.19,1,.22,1);
+  }
+  .mobile-menu.open a { opacity: 1; transform: none; }
+
+  .hamburger span {
+    display: block; width: 22px; height: 1.8px; background: currentColor;
+    border-radius: 3px; transition: transform .4s cubic-bezier(.19,1,.22,1), opacity .3s ease;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: translateX(-8px); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  /* ---------- Progress bar ---------- */
+  #progress {
+    position: fixed; top: 0; left: 0; height: 2.5px; width: 0;
+    background: linear-gradient(90deg, #C29B54, #C2643F);
+    z-index: 130;
+  }
+
+  /* ---------- Events hover image ---------- */
+  .event-float {
+    position: fixed;
+    width: 260px; height: 320px;
+    border-radius: 18px;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.9) rotate(-3deg);
+    transition: opacity .45s ease, transform .55s cubic-bezier(.19,1,.22,1);
+    z-index: 60;
+    box-shadow: 0 32px 70px -24px rgba(20,52,42,.6);
+  }
+  .event-float.show { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(-3deg); }
+
+  /* ---------- Toast ---------- */
+  #toast {
+    position: fixed; left: 50%; bottom: 28px;
+    transform: translate(-50%, 130%);
+    transition: transform .6s cubic-bezier(.19,1,.22,1), opacity .4s ease;
+    opacity: 0;
+    z-index: 140;
+    background: #14342A; color: #F7F1E7;
+    padding: 14px 24px; border-radius: 999px;
+    font-size: 13px; letter-spacing: .08em;
+    box-shadow: 0 26px 50px -22px rgba(20,52,42,.7);
+    display: flex; align-items: center; gap: 12px;
+  }
+  #toast.show { transform: translate(-50%, 0); opacity: 1; }
+
+  /* ---------- Misc ---------- */
+  .organic-blob {
+    border-radius: 58% 42% 47% 53% / 43% 51% 49% 57%;
+    animation: morph 18s ease-in-out infinite alternate;
+  }
+  @keyframes morph {
+    0% { border-radius: 58% 42% 47% 53% / 43% 51% 49% 57%; }
+    50% { border-radius: 42% 58% 62% 38% / 56% 42% 58% 44%; }
+    100% { border-radius: 51% 49% 38% 62% / 47% 57% 43% 53%; }
+  }
+  .float-slow { animation: floaty 8s ease-in-out infinite; }
+  .float-slower { animation: floaty 11s ease-in-out infinite reverse; }
+  @keyframes floaty {
+    0%,100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-16px) rotate(1.5deg); }
+  }
+  .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(43,28,20,.18), transparent); }
+  .kicker { letter-spacing: .28em; text-transform: uppercase; font-size: 11px; font-weight: 500; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  .magnetic { transition: transform .45s cubic-bezier(.19,1,.22,1); }
+
+  input, select, textarea { font-family: inherit; }
+  .field {
+    width: 100%;
+    background: rgba(255,255,255,.6);
+    border: 1px solid rgba(43,28,20,.16);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: #2B1C14;
+    transition: border-color .35s ease, box-shadow .35s ease, background-color .35s ease;
+    outline: none;
+  }
+  .field:focus {
+    border-color: #14342A;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(20,52,42,.10);
+  }
+  .seat-opt input:checked + div {
+    background: #14342A; color: #F7F1E7; border-color: #14342A;
+  }
+  .seat-opt input:checked + div .dot { background: #C29B54; }
+
+  .cart-badge {
+    transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+  }
+  .cart-badge.bump { transform: scale(1.32); }
+
+  .quote-mark {
+    font-family: 'Fraunces', serif;
+    line-height: .8;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition-duration: .01ms !important; }
+    html.js .reveal { opacity: 1 !important; transform: none !important; }
+    .word { opacity: 1 !important; transform: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body class="font-sans antialiased">
+
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+
+<div id="progress"></div>
+
+<!-- ======================= NAVIGATION ======================= -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-[100] py-4 md:py-5">
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8 flex items-center justify-between gap-6">
+
+    <a href="#home" class="flex items-center gap-3 group">
+      <span class="w-10 h-10 rounded-full bg-forest text-ivory grid place-items-center font-display text-[15px] tracking-tight transition-transform duration-500 group-hover:rotate-[10deg]">M<span class="text-brass">&amp;</span>M</span>
+      <span class="leading-none">
+        <span id="brandName" class="block font-display text-[19px] sm:text-[21px] font-semibold tracking-tight text-espresso transition-colors duration-500">MUSE &amp; MINT</span>
+        <span id="brandSub" class="block text-[9.5px] tracking-[.32em] uppercase text-terra font-medium mt-[3px]">Jubilee Hills · Hyderabad</span>
+      </span>
+    </a>
+
+    <nav id="desktopNav" class="hidden lg:flex items-center gap-7 text-[12.5px] font-medium tracking-[.11em] uppercase text-espresso">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#story" class="nav-link">Our Story</a>
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#space" class="nav-link">The Space</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#events" class="nav-link">Events</a>
+      <a href="#visit" class="nav-link">Visit Us</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center gap-2 px-3 py-2 rounded-full border border-espresso/15 text-[10.5px] tracking-[.16em] uppercase text-espresso/80">
+        <span class="status-dot"></span>
+        <span>Open · 8 AM — 11 PM</span>
+      </div>
+
+      <a href="#reserve" class="btn btn-sweep hidden sm:inline-flex items-center gap-2 bg-forest text-ivory px-5 py-3 rounded-full text-[11px] font-semibold tracking-[.16em] uppercase hover:bg-forest2">
+        Book a Table
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button id="cartBtn" class="relative w-11 h-11 rounded-full border border-espresso/15 grid place-items-center text-espresso hover:bg-espresso hover:text-ivory transition-colors duration-400" aria-label="Your order">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span id="cartCount" class="cart-badge absolute -top-1 -right-1 min-w-[19px] h-[19px] px-1 rounded-full bg-terra text-white text-[10px] font-semibold grid place-items-center">0</span>
+      </button>
+
+      <button id="menuToggle" class="hamburger lg:hidden w-11 h-11 rounded-full bg-forest text-ivory grid place-items-center gap-[5px]" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" class="mobile-menu flex flex-col justify-center px-8">
+  <div class="max-w-[1320px] mx-auto w-full">
+    <p class="kicker text-brass mb-8">Navigation</p>
+    <nav class="flex flex-col gap-1">
+      <a href="#home" class="font-display text-[clamp(2rem,8vw,3.2rem)] text-ivory leading-[1.12]" style="transition-delay:.12s">Home</a>
+      <a href="#story" class="font-display text-[clamp(2rem,8vw,3.2rem)] text-ivory leading-[1.12]" style="transition-delay:.18s">Our Story</a>
+      <a href="#menu" class="font-display text-[clamp(2rem,8vw,3.2rem)] text-ivory leading-[1.12]" style="transition-delay:.24s">Menu</a>
+      <a href="#space" class="font-display text-[clamp(2rem,8vw,3.2rem)] text-ivory leading-[1.12]" style="transition-delay:.30s">The Space</a>
+      <a href="#gallery" class="font-display text-[clamp(2rem,8vw,3.2rem)] text-ivory leading-[1.12]" style="transition-delay:.36s">Gallery</a>
+      <a href="#events" class="font-display text-[clamp(2rem,8vw,3.2rem)] text-ivory leading-[1.12]" style="transition-delay:.42s">Events</a>
+      <a href="#visit" class="font-display text-[clamp(2rem,8vw,3.2rem)] text-ivory leading-[1.12]" style="transition-delay:.48s">Visit Us</a>
+    </nav>
+    <a href="#reserve" class="btn btn-sweep inline-flex items-center gap-2 mt-10 bg-terra text-white px-8 py-4 rounded-full text-[11px] font-semibold tracking-[.2em] uppercase" style="transition-delay:.56s">
+      Book a Table
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <div class="mt-10 text-ivory/70 text-sm leading-relaxed">
+      Road No. 36, Jubilee Hills<br>Hyderabad, Telangana 500033<br>
+      <a href="tel:+914040001234" class="text-brass">+91 40 4000 1234</a>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= HERO ======================= -->
+<section id="home" class="relative min-h-[100svh] flex items-end overflow-hidden grain">
+  <div class="hero-media" id="heroMedia" style="background-image:url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=2000&q=80');"></div>
+  <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(20,32,27,.72) 0%, rgba(20,32,27,.32) 34%, rgba(20,32,27,.62) 72%, rgba(15,28,23,.92) 100%);"></div>
+  <div class="absolute inset-0" style="background:radial-gradient(1100px 620px at 78% 18%, rgba(194,155,84,.22), transparent 62%);"></div>
+
+  <!-- floating badges -->
+  <div class="hidden xl:block absolute right-[7%] top-[26%] float-slow">
+    <div class="backdrop-blur-md bg-white/12 border border-white/25 rounded-2xl px-6 py-5 text-ivory max-w-[218px]">
+      <p class="kicker text-brass">Today's Brew</p>
+      <p class="font-display text-[19px] mt-2 leading-snug">Chikmagalur<br>Single Origin</p>
+      <p class="text-ivory/75 text-[12.5px] mt-2 leading-relaxed">Cocoa · jaggery · toasted almond</p>
+    </div>
+  </div>
+  <div class="hidden xl:block absolute right-[16%] bottom-[16%] float-slower">
+    <div class="backdrop-blur-md bg-terra/85 border border-white/15 rounded-2xl px-5 py-4 text-white">
+      <p class="text-[11px] tracking-[.22em] uppercase">Freshly Baked</p>
+      <p class="font-display text-[17px] mt-1">Every morning, 7:30 AM</p>
+    </div>
+  </div>
+
+  <div class="relative z-10 w-full max-w-[1320px] mx-auto px-5 sm:px-8 pb-16 sm:pb-20 pt-32">
+    <div class="max-w-[880px]">
+      <div class="flex items-center gap-3 mb-7 reveal">
+        <span class="w-11 h-[1.5px] bg-brass"></span>
+        <p class="kicker text-brass">Jubilee Hills · Hyderabad</p>
+      </div>
+
+      <h1 class="text-ivory font-display font-semibold leading-[0.92] tracking-[-0.028em] text-[clamp(3.2rem,11.5vw,9.2rem)]">
+        <span class="split-words block">MUSE</span>
+        <span class="split-words block text-brass italic">&amp; MINT</span>
+      </h1>
+
+      <p class="text-ivory font-display italic text-[clamp(1.35rem,3.6vw,2.35rem)] mt-6 leading-[1.25] split-words">
+        Coffee, Conversations &amp; Good Things.
+      </p>
+
+      <p class="text-ivory/82 text-[16px] sm:text-[18px] leading-[1.75] mt-6 max-w-[620px] reveal">
+        A contemporary neighbourhood café in Jubilee Hills serving specialty coffee, fresh bakes,
+        comforting plates and a little inspiration with every cup.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 mt-9 reveal">
+        <a href="#menu" class="btn btn-sweep inline-flex items-center gap-3 bg-ivory text-forest px-8 py-[18px] rounded-full text-[11.5px] font-semibold tracking-[.2em] uppercase hover:bg-white">
+          Explore Menu
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#visit" class="btn inline-flex items-center gap-3 border border-ivory/45 text-ivory px-8 py-[18px] rounded-full text-[11.5px] font-semibold tracking-[.2em] uppercase hover:bg-ivory hover:text-forest">
+          Visit Us
+        </a>
+      </div>
+
+      <div class="mt-11 flex flex-wrap items-center gap-x-8 gap-y-4 reveal">
+        <div class="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-ivory/25 bg-white/8">
+          <span class="status-dot"></span>
+          <span class="text-ivory text-[11px] tracking-[.22em] uppercase font-medium tabular">Open Today · 8:00 AM — 11:00 PM</span>
+        </div>
+        <div class="flex items-center gap-3 text-ivory/70 text-[12px] tracking-[.12em] uppercase">
+          <div class="flex -space-x-2">
+            <img class="w-8 h-8 rounded-full border border-white/40 object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Guest">
+            <img class="w-8 h-8 rounded-full border border-white/40 object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Guest">
+            <img class="w-8 h-8 rounded-full border border-white/40 object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Guest">
+          </div>
+          <span>1,200+ regulars this month</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#story" class="absolute bottom-7 right-6 sm:right-10 z-10 hidden sm:flex flex-col items-center gap-3 text-ivory/75 hover:text-ivory transition-colors">
+    <span class="text-[9.5px] tracking-[.28em] uppercase" style="writing-mode:vertical-rl">Scroll</span>
+    <span class="w-[1.5px] h-12 bg-ivory/40 relative overflow-hidden">
+      <span class="absolute inset-x-0 top-0 h-4 bg-brass" style="animation:scrollLine 2.2s ease-in-out infinite"></span>
+    </span>
+  </a>
+  <style>@keyframes scrollLine{0%{transform:translateY(-100%)}100%{transform:translateY(320%)}}</style>
+</section>
+
+<!-- ======================= MARQUEE ======================= -->
+<div class="bg-forest text-ivory py-5 overflow-hidden">
+  <div class="marquee items-center gap-10 text-[12px] sm:text-[13px] tracking-[.28em] uppercase">
+    <span class="flex items-center gap-10 pr-10">
+      <span>Specialty Coffee</span><span class="text-brass">◆</span>
+      <span>Fresh Bakes Daily</span><span class="text-brass">◆</span>
+      <span>Indian Comfort Plates</span><span class="text-brass">◆</span>
+      <span>Slow Mornings</span><span class="text-brass">◆</span>
+      <span>Neighbourhood Energy</span><span class="text-brass">◆</span>
+      <span>Seasonal Menus</span><span class="text-brass">◆</span>
+    </span>
+    <span class="flex items-center gap-10 pr-10" aria-hidden="true">
+      <span>Specialty Coffee</span><span class="text-brass">◆</span>
+      <span>Fresh Bakes Daily</span><span class="text-brass">◆</span>
+      <span>Indian Comfort Plates</span><span class="text-brass">◆</span>
+      <span>Slow Mornings</span><span class="text-brass">◆</span>
+      <span>Neighbourhood Energy</span><span class="text-brass">◆</span>
+      <span>Seasonal Menus</span><span class="text-brass">◆</span>
+    </span>
+  </div>
+</div>
+
+<!-- ======================= OUR STORY ======================= -->
+<section id="story" class="relative py-24 sm:py-32 overflow-hidden">
+  <div class="absolute -left-24 top-24 w-[420px] h-[420px] bg-cream/70 organic-blob -z-10"></div>
+  <div class="absolute right-[-120px] bottom-10 w-[380px] h-[380px] bg-terra/10 organic-blob -z-10" style="animation-delay:-6s"></div>
+
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+      <!-- Images -->
+      <div class="relative">
+        <div class="img-card rounded-[28px] overflow-hidden soft-shadow reveal" data-parallax="0.06">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1100&q=80" alt="Warm café interior with plants and natural light" class="w-full h-[420px] sm:h-[560px] object-cover">
+        </div>
+        <div class="absolute -bottom-10 -right-2 sm:right-6 w-[52%] max-w-[260px] img-card rounded-[22px] overflow-hidden border-[7px] border-paper soft-shadow reveal" data-parallax="-0.05">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Latte art in a ceramic cup" class="w-full h-[190px] sm:h-[240px] object-cover">
+        </div>
+        <div class="absolute -top-6 -left-4 sm:-left-8 bg-forest text-ivory rounded-2xl px-6 py-5 float-slow">
+          <p class="font-display text-[26px] leading-none">Est. 2021</p>
+          <p class="kicker text-brass mt-2">Hyderabad</p>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div>
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="w-9 h-[1.5px] bg-terra"></span>
+          <p class="kicker text-terra">Our Story</p>
+        </div>
+
+        <h2 class="font-display text-espresso text-[clamp(2.35rem,5.4vw,4.15rem)] leading-[1.03] tracking-[-0.022em] split-words">
+          Made for your <em class="italic text-terra">everyday</em> moments.
+        </h2>
+
+        <p class="text-espresso/78 text-[16.5px] sm:text-[18px] leading-[1.85] mt-8 reveal">
+          MUSE &amp; MINT began with a simple idea: create a café that feels equally right for a quiet cup of
+          coffee, a two-hour conversation, a creative work session or an unplanned evening with friends.
+        </p>
+
+        <p class="text-espresso/65 text-[15px] leading-[1.9] mt-5 reveal">
+          We roast with intention, bake every morning, and cook the kind of food that feels familiar but
+          never boring — all served in a room designed to let the day slow down a little.
+        </p>
+
+        <!-- Highlights -->
+        <div class="grid sm:grid-cols-2 gap-x-8 gap-y-4 mt-9">
+          <div class="flex items-start gap-3 reveal">
+            <span class="mt-1 w-8 h-8 rounded-full bg-forest/10 text-forest grid place-items-center shrink-0">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>
+            </span>
+            <div>
+              <p class="font-medium text-espresso text-[15px]">Specialty coffee</p>
+              <p class="text-espresso/55 text-[13px] leading-relaxed mt-1">Single-origin beans, brewed with care.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 reveal">
+            <span class="mt-1 w-8 h-8 rounded-full bg-forest/10 text-forest grid place-items-center shrink-0">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3"/><path d="M1 14h6M9 8h6M17 16h6"/></svg>
+            </span>
+            <div>
+              <p class="font-medium text-espresso text-[15px]">Freshly baked pastries</p>
+              <p class="text-espresso/55 text-[13px] leading-relaxed mt-1">Out of the oven before the doors open.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 reveal">
+            <span class="mt-1 w-8 h-8 rounded-full bg-forest/10 text-forest grid place-items-center shrink-0">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 11h18"/><path d="M5 11a7 7 0 0 1 14 0"/><path d="M2 15h20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="M12 4V2"/></svg>
+            </span>
+            <div>
+              <p class="font-medium text-espresso text-[15px]">Indian-inspired plates</p>
+              <p class="text-espresso/55 text-[13px] leading-relaxed mt-1">Comfort food with a contemporary twist.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 reveal">
+            <span class="mt-1 w-8 h-8 rounded-full bg-forest/10 text-forest grid place-items-center shrink-0">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+            <div>
+              <p class="font-medium text-espresso text-[15px]">Seasonal ingredients</p>
+              <p class="text-espresso/55 text-[13px] leading-relaxed mt-1">Menus that shift with the market.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 reveal sm:col-span-2">
+            <span class="mt-1 w-8 h-8 rounded-full bg-forest/10 text-forest grid place-items-center shrink-0">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+            </span>
+            <div>
+              <p class="font-medium text-espresso text-[15px]">Thoughtful interiors</p>
+              <p class="text-espresso/55 text-[13px] leading-relaxed mt-1">Textured walls, warm light, and seating you'll want to stay in.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 sm:gap-6 mt-12 pt-10 border-t border-espresso/12">
+          <div class="reveal">
+            <p class="font-display text-[clamp(2.1rem,5vw,3.15rem)] leading-none text-forest tabular">
+              <span class="count" data-count="18">0</span><span class="text-terra">+</span>
+            </p>
+            <p class="text-espresso/60 text-[12px] sm:text-[13px] leading-snug mt-2 tracking-[.05em]">Coffee &amp; food favourites</p>
+          </div>
+          <div class="reveal">
+            <p class="font-display text-[clamp(2.1rem,5vw,3.15rem)] leading-none text-forest tabular">
+              <span class="count" data-count="7">0</span>
+            </p>
+            <p class="text-espresso/60 text-[12px] sm:text-[13px] leading-snug mt-2 tracking-[.05em]">Days open every week</p>
+          </div>
+          <div class="reveal">
+            <p class="font-display text-[clamp(2.1rem,5vw,3.15rem)] leading-none text-forest tabular">
+              <span class="count" data-count="100">0</span><span class="text-terra">%</span>
+            </p>
+            <p class="text-espresso/60 text-[12px] sm:text-[13px] leading-snug mt-2 tracking-[.05em]">Made with care</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= THE SPACE ======================= -->
+<section id="space" class="relative py-24 sm:py-28 bg-forest text-ivory overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.16]" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;"></div>
+  <div class="absolute inset-0" style="background:linear-gradient(180deg,#14342A 0%,rgba(20,52,42,.88) 45%,#14342A 100%)"></div>
+
+  <div class="relative max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+      <div class="max-w-[720px]">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="w-9 h-[1.5px] bg-brass"></span>
+          <p class="kicker text-brass">The Space</p>
+        </div>
+        <h2 class="font-display text-[clamp(2.35rem,5.6vw,4.4rem)] leading-[1.03] tracking-[-0.022em] split-words">
+          A space that <em class="italic text-brass">slows</em> you down.
+        </h2>
+        <p class="text-ivory/72 text-[16px] sm:text-[18px] leading-[1.85] mt-7 reveal">
+          Natural wood, textured walls, indoor plants, soft lighting and comfortable seating come together
+          to create a space that feels relaxed without feeling ordinary.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-2.5 reveal">
+        <span class="px-5 py-2.5 rounded-full border border-ivory/22 text-[11px] tracking-[.16em] uppercase hover:bg-ivory hover:text-forest transition-colors duration-400 cursor-default">Morning Light</span>
+        <span class="px-5 py-2.5 rounded-full border border-ivory/22 text-[11px] tracking-[.16em] uppercase hover:bg-ivory hover:text-forest transition-colors duration-400 cursor-default">Coffee Bar</span>
+        <span class="px-5 py-2.5 rounded-full border border-ivory/22 text-[11px] tracking-[.16em] uppercase hover:bg-ivory hover:text-forest transition-colors duration-400 cursor-default">Green Corner</span>
+        <span class="px-5 py-2.5 rounded-full border border-ivory/22 text-[11px] tracking-[.16em] uppercase hover:bg-ivory hover:text-forest transition-colors duration-400 cursor-default">Evening Tables</span>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7 mt-14">
+      <div class="img-card rounded-[26px] overflow-hidden group reveal">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80" alt="Morning light café corner" class="w-full h-[300px] sm:h-[430px] object-cover">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 40%,rgba(15,28,23,.85))"></div>
+        <div class="absolute bottom-0 left-0 p-7 sm:p-8">
+          <p class="text-brass text-[10.5px] tracking-[.24em] uppercase">01</p>
+          <h3 class="font-display text-[26px] sm:text-[30px] mt-2">Morning Light</h3>
+          <p class="text-ivory/72 text-[13.5px] leading-relaxed mt-2 max-w-[330px]">East-facing windows, long shadows and the first brew of the day.</p>
+        </div>
+      </div>
+
+      <div class="img-card rounded-[26px] overflow-hidden group reveal">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80" alt="Coffee bar with espresso machine" class="w-full h-[300px] sm:h-[430px] object-cover">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 40%,rgba(15,28,23,.85))"></div>
+        <div class="absolute bottom-0 left-0 p-7 sm:p-8">
+          <p class="text-brass text-[10.5px] tracking-[.24em] uppercase">02</p>
+          <h3 class="font-display text-[26px] sm:text-[30px] mt-2">Coffee Bar</h3>
+          <p class="text-ivory/72 text-[13.5px] leading-relaxed mt-2 max-w-[330px]">Pull up a stool, watch the pour, talk to the people making it.</p>
+        </div>
+      </div>
+
+      <div class="img-card rounded-[26px] overflow-hidden group reveal">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="Green corner seating with plants" class="w-full h-[280px] sm:h-[380px] object-cover">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 40%,rgba(15,28,23,.85))"></div>
+        <div class="absolute bottom-0 left-0 p-7 sm:p-8">
+          <p class="text-brass text-[10.5px] tracking-[.24em] uppercase">03</p>
+          <h3 class="font-display text-[26px] sm:text-[30px] mt-2">Green Corner</h3>
+          <p class="text-ivory/72 text-[13.5px] leading-relaxed mt-2 max-w-[330px]">Our quietest table, wrapped in plants and afternoon shade.</p>
+        </div>
+      </div>
+
+      <div class="img-card rounded-[26px] overflow-hidden group reveal">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80" alt="Evening table with warm lighting" class="w-full h-[280px] sm:h-[380px] object-cover">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 40%,rgba(15,28,23,.85))"></div>
+        <div class="absolute bottom-0 left-0 p-7 sm:p-8">
+          <p class="text-brass text-[10.5px] tracking-[.24em] uppercase">04</p>
+          <h3 class="font-display text-[26px] sm:text-[30px] mt-2">Evening Tables</h3>
+          <p class="text-ivory/72 text-[13.5px] leading-relaxed mt-2 max-w-[330px]">Low light, slow dinners, and conversations that run late.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MUSE SIGNATURES ======================= -->
+<section class="relative py-24 sm:py-28 bg-paper overflow-hidden">
+  <div class="absolute left-1/2 -translate-x-1/2 top-0 w-[1000px] h-[420px] bg-cream/45 organic-blob -z-10"></div>
+
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-[760px] mx-auto">
+      <div class="flex items-center justify-center gap-3 mb-6 reveal">
+        <span class="w-9 h-[1.5px] bg-terra"></span>
+        <p class="kicker text-terra">Muse Signatures</p>
+        <span class="w-9 h-[1.5px] bg-terra"></span>
+      </div>
+      <h2 class="font-display text-espresso text-[clamp(2.4rem,6vw,4.6rem)] leading-[1.02] tracking-[-0.025em] split-words">
+        The drinks people <em class="italic text-terra">come back</em> for.
+      </h2>
+      <p class="text-espresso/70 text-[16px] sm:text-[17.5px] leading-[1.8] mt-6 reveal">
+        Crafted by our bar team, tested obsessively, and made with ingredients we're genuinely proud of.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+
+      <article class="lift reveal bg-white rounded-[24px] overflow-hidden border border-espresso/8">
+        <div class="img-card h-[260px]">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Pistachio Rose Latte" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-white/92 text-forest text-[9.5px] tracking-[.2em] uppercase px-3 py-1.5 rounded-full font-semibold">Bestseller</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-[21px] text-espresso leading-tight">Pistachio Rose Latte</h3>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.75] mt-2.5">House pistachio cream, rose petal syrup and a double shot of our signature blend.</p>
+          <div class="flex items-center justify-between mt-6">
+            <p class="font-display text-[21px] text-terra">₹340</p>
+            <button class="add-btn text-[10.5px] tracking-[.16em] uppercase font-semibold text-forest border border-forest/25 px-4 py-2.5 rounded-full hover:bg-forest hover:text-ivory transition-colors duration-400" data-item="Pistachio Rose Latte">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="lift reveal bg-white rounded-[24px] overflow-hidden border border-espresso/8">
+        <div class="img-card h-[260px]">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80" alt="Strawberry Matcha Cloud" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-[21px] text-espresso leading-tight">Strawberry Matcha Cloud</h3>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.75] mt-2.5">Ceremonial matcha layered over fresh strawberry compote and vanilla cold foam.</p>
+          <div class="flex items-center justify-between mt-6">
+            <p class="font-display text-[21px] text-terra">₹360</p>
+            <button class="add-btn text-[10.5px] tracking-[.16em] uppercase font-semibold text-forest border border-forest/25 px-4 py-2.5 rounded-full hover:bg-forest hover:text-ivory transition-colors duration-400" data-item="Strawberry Matcha Cloud">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="lift reveal bg-white rounded-[24px] overflow-hidden border border-espresso/8">
+        <div class="img-card h-[260px]">
+          <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=900&q=80" alt="Orange Espresso Tonic" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-[21px] text-espresso leading-tight">Orange Espresso Tonic</h3>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.75] mt-2.5">Bright espresso over artisanal tonic, fresh orange and a whisper of rosemary.</p>
+          <div class="flex items-center justify-between mt-6">
+            <p class="font-display text-[21px] text-terra">₹320</p>
+            <button class="add-btn text-[10.5px] tracking-[.16em] uppercase font-semibold text-forest border border-forest/25 px-4 py-2.5 rounded-full hover:bg-forest hover:text-ivory transition-colors duration-400" data-item="Orange Espresso Tonic">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="lift reveal bg-white rounded-[24px] overflow-hidden border border-espresso/8">
+        <div class="img-card h-[260px]">
+          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=900&q=80" alt="Cardamom Cold Brew" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-terra text-white text-[9.5px] tracking-[.2em] uppercase px-3 py-1.5 rounded-full font-semibold">18h steep</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-[21px] text-espresso leading-tight">Cardamom Cold Brew</h3>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.75] mt-2.5">Slow-steeped for 18 hours with green cardamom, served over clear ice.</p>
+          <div class="flex items-center justify-between mt-6">
+            <p class="font-display text-[21px] text-terra">₹300</p>
+            <button class="add-btn text-[10.5px] tracking-[.16em] uppercase font-semibold text-forest border border-forest/25 px-4 py-2.5 rounded-full hover:bg-forest hover:text-ivory transition-colors duration-400" data-item="Cardamom Cold Brew">Add</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MENU ======================= -->
+<section id="menu" class="relative py-24 sm:py-28">
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+      <div class="max-w-[680px]">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="w-9 h-[1.5px] bg-terra"></span>
+          <p class="kicker text-terra">The Menu</p>
+        </div>
+        <h2 class="font-display text-espresso text-[clamp(2.35rem,5.6vw,4.35rem)] leading-[1.03] tracking-[-0.022em] split-words">
+          Good things, <em class="italic text-terra">all day</em> long.
+        </h2>
+        <p class="text-espresso/70 text-[16px] sm:text-[17.5px] leading-[1.82] mt-6 reveal">
+          From the first flat white to the last slice of cheesecake — everything is made in-house,
+          in small batches, with ingredients we actually know the name of.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-4 reveal">
+        <div class="bg-cream/70 rounded-2xl px-6 py-5">
+          <p class="kicker text-terra">Kitchen Hours</p>
+          <p class="font-display text-[21px] text-espresso mt-1.5 tabular">8:00 AM — 10:30 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="flex flex-wrap gap-2.5 mt-12 reveal" id="menuFilters">
+      <button class="chip active px-5 sm:px-6 py-3 rounded-full border border-espresso/18 text-[11px] tracking-[.16em] uppercase font-semibold text-espresso" data-filter="all">All</button>
+      <button class="chip px-5 sm:px-6 py-3 rounded-full border border-espresso/18 text-[11px] tracking-[.16em] uppercase font-semibold text-espresso" data-filter="coffee">Coffee</button>
+      <button class="chip px-5 sm:px-6 py-3 rounded-full border border-espresso/18 text-[11px] tracking-[.16em] uppercase font-semibold text-espresso" data-filter="matcha">Matcha &amp; Tea</button>
+      <button class="chip px-5 sm:px-6 py-3 rounded-full border border-espresso/18 text-[11px] tracking-[.16em] uppercase font-semibold text-espresso" data-filter="breakfast">Breakfast &amp; Brunch</button>
+      <button class="chip px-5 sm:px-6 py-3 rounded-full border border-espresso/18 text-[11px] tracking-[.16em] uppercase font-semibold text-espresso" data-filter="plates">Café Plates</button>
+      <button class="chip px-5 sm:px-6 py-3 rounded-full border border-espresso/18 text-[11px] tracking-[.16em] uppercase font-semibold text-espresso" data-filter="desserts">Desserts</button>
+    </div>
+
+    <!-- Grid -->
+    <div id="menuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 mt-11">
+
+      <!-- COFFEE -->
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="coffee">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Jubilee Flat White" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Jubilee Flat White</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹260</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Double ristretto, silky micro-foam, house blend with notes of cocoa and hazelnut.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Jubilee Flat White">Add to Order</button>
+        </div>
+      </article>
+
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="coffee">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=80" alt="Filter Kaapi" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Filter Kaapi</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹190</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Chikmagalur single origin, brewed slow in brass, finished with warm frothed milk.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Filter Kaapi">Add to Order</button>
+        </div>
+      </article>
+
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="coffee">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Hazelnut Mocha" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Hazelnut Mocha</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹310</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">70% dark chocolate, roasted hazelnut and espresso, topped with cream.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Hazelnut Mocha">Add to Order</button>
+        </div>
+      </article>
+
+      <!-- MATCHA -->
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="matcha">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80" alt="Ceremonial Matcha Latte" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Ceremonial Matcha Latte</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹320</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Stone-ground Uji matcha, whisked by hand, with oat or dairy milk.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Ceremonial Matcha Latte">Add to Order</button>
+        </div>
+      </article>
+
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="matcha">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80" alt="Masala Chai Reimagined" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Masala Chai, Reimagined</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹180</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Assam leaves simmered with ginger, green cardamom and a hint of black pepper.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Masala Chai, Reimagined">Add to Order</button>
+        </div>
+      </article>
+
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="matcha">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=900&q=80" alt="Hibiscus Peach Iced Tea" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Hibiscus Peach Iced Tea</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹260</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Cold-brewed hibiscus, white peach, lime and mint over crushed ice.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Hibiscus Peach Iced Tea">Add to Order</button>
+        </div>
+      </article>
+
+      <!-- BREAKFAST -->
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="breakfast">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=900&q=80" alt="Malabar Avocado Toast" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Malabar Avocado Toast</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹420</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Sourdough, smashed avocado, curry leaf oil, chilli flakes and poached egg.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Malabar Avocado Toast">Add to Order</button>
+        </div>
+      </article>
+
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="breakfast">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80" alt="Truffle Egg Croissant" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Truffle Egg Croissant</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹380</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Buttery croissant, soft scrambled eggs, aged cheddar and a drizzle of truffle oil.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Truffle Egg Croissant">Add to Order</button>
+        </div>
+      </article>
+
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="breakfast">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Keema and Egg Bhurji Bowl" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Keema &amp; Egg Bhurji Bowl</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹460</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Spiced chicken keema, masala eggs, buttered pav crumbs and pickled onion.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Keema & Egg Bhurji Bowl">Add to Order</button>
+        </div>
+      </article>
+
+      <!-- PLATES -->
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="plates">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Smoked Paneer Tikka Flatbread" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Smoked Paneer Tikka Flatbread</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹520</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Tandoori paneer, mint yoghurt, red onion and coriander on stone-baked base.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Smoked Paneer Tikka Flatbread">Add to Order</button>
+        </div>
+      </article>
+
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="plates">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80" alt="Kerala Coconut Curry Rice" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Kerala Coconut Curry Rice</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹480</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Slow coconut curry, curry leaf tempered rice, appalam and house pickle.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Kerala Coconut Curry Rice">Add to Order</button>
+        </div>
+      </article>
+
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="plates">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80" alt="Peri Peri Chicken Sliders" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Peri Peri Chicken Sliders</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹470</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Three soft buns, grilled peri peri chicken, slaw and smoked garlic aioli.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Peri Peri Chicken Sliders">Add to Order</button>
+        </div>
+      </article>
+
+      <!-- DESSERTS -->
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="desserts">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=80" alt="Cardamom Basque Cheesecake" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Cardamom Basque Cheesecake</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹340</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Burnt-top cheesecake scented with green cardamom and a spoon of rose compote.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Cardamom Basque Cheesecake">Add to Order</button>
+        </div>
+      </article>
+
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="desserts">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?auto=format&fit=crop&w=900&q=80" alt="Sea Salt Chocolate Tart" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Sea Salt Chocolate Tart</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹320</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Dark chocolate ganache, cocoa crust, sea salt and candied orange peel.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Sea Salt Chocolate Tart">Add to Order</button>
+        </div>
+      </article>
+
+      <article class="menu-item lift bg-white rounded-[22px] overflow-hidden border border-espresso/8 reveal" data-cat="desserts">
+        <div class="img-card h-[210px]"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80" alt="Rose Pistachio Croissant" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-display text-[20px] text-espresso leading-tight">Rose Pistachio Croissant</h3>
+            <p class="font-display text-[19px] text-terra shrink-0">₹280</p>
+          </div>
+          <p class="text-espresso/62 text-[13.5px] leading-[1.72] mt-2.5">Laminated in-house, filled with pistachio cream and finished with rose petals.</p>
+          <button class="add-btn mt-5 w-full py-3.5 rounded-full bg-forest text-ivory text-[10.5px] tracking-[.18em] uppercase font-semibold hover:bg-terra transition-colors duration-400" data-item="Rose Pistachio Croissant">Add to Order</button>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="mt-12 text-center reveal">
+      <p class="text-espresso/60 text-[14px] leading-relaxed max-w-[560px] mx-auto">
+        Have allergies or dietary preferences? Tell your server — most of our menu can be adapted,
+        and we always have vegan and gluten-friendly options available.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= EXPERIENCE ======================= -->
+<section class="relative py-24 sm:py-28 bg-espresso text-ivory overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.12]" style="background-image:url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;"></div>
+
+  <div class="relative max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="max-w-[820px]">
+      <div class="flex items-center gap-3 mb-6 reveal">
+        <span class="w-9 h-[1.5px] bg-brass"></span>
+        <p class="kicker text-brass">The Experience</p>
+      </div>
+      <h2 class="font-display text-[clamp(2.35rem,5.8vw,4.55rem)] leading-[1.03] tracking-[-0.022em] split-words">
+        Come for the coffee. <em class="italic text-brass">Stay</em> for the mood.
+      </h2>
+    </div>
+
+    <div class="mt-14 space-y-4">
+
+      <div class="exp-row rounded-[22px] border border-ivory/14 p-7 sm:p-9 reveal" data-bg="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80">
+        <div class="exp-bg"></div>
+        <div class="relative">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-10">
+            <p class="exp-num font-display text-[30px] sm:text-[36px] text-brass/85 tabular">01</p>
+            <h3 class="font-display text-[26px] sm:text-[34px] leading-tight">Slow Mornings</h3>
+            <p class="text-ivory/70 text-[14.5px] leading-[1.8] sm:max-w-[430px] sm:ml-auto">
+              Early light, quiet playlists and the first pour of the day. Best enjoyed alone, with a book.
+            </p>
+          </div>
+          <div class="exp-detail text-ivory/80 text-[14px] leading-[1.85] max-w-[640px]">
+            <span class="inline-flex items-center gap-2 text-brass text-[10.5px] tracking-[.22em] uppercase mr-3">8 AM — 11 AM</span>
+            Bottomless filter refills on weekdays, fresh bakes from 7:30 AM, and the calmest seats in the house.
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row rounded-[22px] border border-ivory/14 p-7 sm:p-9 reveal" data-bg="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80">
+        <div class="exp-bg"></div>
+        <div class="relative">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-10">
+            <p class="exp-num font-display text-[30px] sm:text-[36px] text-brass/85 tabular">02</p>
+            <h3 class="font-display text-[26px] sm:text-[34px] leading-tight">Work &amp; Create</h3>
+            <p class="text-ivory/70 text-[14.5px] leading-[1.8] sm:max-w-[430px] sm:ml-auto">
+              Fast Wi-Fi, plenty of plug points and tables built for long sessions.
+            </p>
+          </div>
+          <div class="exp-detail text-ivory/80 text-[14px] leading-[1.85] max-w-[640px]">
+            <span class="inline-flex items-center gap-2 text-brass text-[10.5px] tracking-[.22em] uppercase mr-3">Weekdays</span>
+            Dedicated work corners, unlimited water, and a quiet zone after 2 PM. Ask about our weekly work pass.
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row rounded-[22px] border border-ivory/14 p-7 sm:p-9 reveal" data-bg="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80">
+        <div class="exp-bg"></div>
+        <div class="relative">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-10">
+            <p class="exp-num font-display text-[30px] sm:text-[36px] text-brass/85 tabular">03</p>
+            <h3 class="font-display text-[26px] sm:text-[34px] leading-tight">After Hours</h3>
+            <p class="text-ivory/70 text-[14.5px] leading-[1.8] sm:max-w-[430px] sm:ml-auto">
+              Lower lights, a short cocktail list, and evenings that never really end on time.
+            </p>
+          </div>
+          <div class="exp-detail text-ivory/80 text-[14px] leading-[1.85] max-w-[640px]">
+            <span class="inline-flex items-center gap-2 text-brass text-[10.5px] tracking-[.22em] uppercase mr-3">After 7 PM</span>
+            Espresso-based cocktails, small plates, vinyl nights and the occasional live set on the terrace.
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row rounded-[22px] border border-ivory/14 p-7 sm:p-9 reveal" data-bg="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=80">
+        <div class="exp-bg"></div>
+        <div class="relative">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-10">
+            <p class="exp-num font-display text-[30px] sm:text-[36px] text-brass/85 tabular">04</p>
+            <h3 class="font-display text-[26px] sm:text-[34px] leading-tight">Weekend Brunch</h3>
+            <p class="text-ivory/70 text-[14.5px] leading-[1.8] sm:max-w-[430px] sm:ml-auto">
+              Long tables, generous plates and the kind of mornings that turn into afternoons.
+            </p>
+          </div>
+          <div class="exp-detail text-ivory/80 text-[14px] leading-[1.85] max-w-[640px]">
+            <span class="inline-flex items-center gap-2 text-brass text-[10.5px] tracking-[.22em] uppercase mr-3">Sat &amp; Sun</span>
+            Special brunch menu served 9 AM — 4 PM, with free-flow filter coffee and a live pastry counter.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= EVENTS ======================= -->
+<section id="events" class="relative py-24 sm:py-28 overflow-hidden">
+  <div class="absolute right-[-140px] top-16 w-[420px] h-[420px] bg-terra/8 organic-blob -z-10"></div>
+
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+      <div class="max-w-[680px]">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="w-9 h-[1.5px] bg-terra"></span>
+          <p class="kicker text-terra">Events &amp; Happenings</p>
+        </div>
+        <h2 class="font-display text-espresso text-[clamp(2.35rem,5.6vw,4.35rem)] leading-[1.03] tracking-[-0.022em] split-words">
+          Something is always <em class="italic text-terra">brewing</em>.
+        </h2>
+      </div>
+      <p class="text-espresso/70 text-[16px] leading-[1.85] max-w-[380px] reveal">
+        Open mics, workshops, tasting tables and slow Sunday sessions — most are free,
+        some need a seat reserved. Follow along for the monthly calendar.
+      </p>
+    </div>
+
+    <div class="mt-12 border-t border-espresso/12" id="eventList">
+
+      <a href="#reserve" class="event-row group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 py-7 border-b border-espresso/12 reveal"
+         data-img="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=800&q=80">
+        <div class="flex items-center gap-5 sm:w-[220px] shrink-0">
+          <p class="font-display text-[30px] sm:text-[36px] text-terra leading-none tabular">12<span class="text-[15px] align-super ml-1 font-sans tracking-[.16em]">JUN</span></p>
+          <p class="text-espresso/55 text-[11px] tracking-[.18em] uppercase">Thursday · 7:30 PM</p>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-display text-[22px] sm:text-[27px] text-espresso leading-tight transition-colors duration-400 group-hover:text-terra">Open Mic &amp; Verse</h3>
+          <p class="text-espresso/62 text-[14px] leading-[1.8] mt-1.5 max-w-[520px]">Poetry, acoustic sets and the occasional first-timer. Sign-ups open at 7 PM.</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="px-4 py-2 rounded-full border border-espresso/18 text-[10px] tracking-[.18em] uppercase text-espresso/70">Free Entry</span>
+          <span class="w-11 h-11 rounded-full border border-espresso/18 grid place-items-center text-espresso group-hover:bg-forest group-hover:text-ivory group-hover:border-forest transition-all duration-500">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a href="#reserve" class="event-row group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 py-7 border-b border-espresso/12 reveal"
+         data-img="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80">
+        <div class="flex items-center gap-5 sm:w-[220px] shrink-0">
+          <p class="font-display text-[30px] sm:text-[36px] text-terra leading-none tabular">21<span class="text-[15px] align-super ml-1 font-sans tracking-[.16em]">JUN</span></p>
+          <p class="text-espresso/55 text-[11px] tracking-[.18em] uppercase">Saturday · 4:00 PM</p>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-display text-[22px] sm:text-[27px] text-espresso leading-tight transition-colors duration-400 group-hover:text-terra">Latte Art Throwdown</h3>
+          <p class="text-espresso/62 text-[14px] leading-[1.8] mt-1.5 max-w-[520px]">Six baristas, one pitcher, and a room full of opinions. Winner takes the golden tamper.</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="px-4 py-2 rounded-full border border-espresso/18 text-[10px] tracking-[.18em] uppercase text-espresso/70">₹250</span>
+          <span class="w-11 h-11 rounded-full border border-espresso/18 grid place-items-center text-espresso group-hover:bg-forest group-hover:text-ivory group-hover:border-forest transition-all duration-500">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a href="#reserve" class="event-row group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 py-7 border-b border-espresso/12 reveal"
+         data-img="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80">
+        <div class="flex items-center gap-5 sm:w-[220px] shrink-0">
+          <p class="font-display text-[30px] sm:text-[36px] text-terra leading-none tabular">22<span class="text-[15px] align-super ml-1 font-sans tracking-[.16em]">JUN</span></p>
+          <p class="text-espresso/55 text-[11px] tracking-[.18em] uppercase">Every Sunday · 11:00 AM</p>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-display text-[22px] sm:text-[27px] text-espresso leading-tight transition-colors duration-400 group-hover:text-terra">Vinyl Sundays</h3>
+          <p class="text-espresso/62 text-[14px] leading-[1.8] mt-1.5 max-w-[520px]">Bring a record, we'll play a side. Soul, jazz, indie and everything in between.</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="px-4 py-2 rounded-full border border-espresso/18 text-[10px] tracking-[.18em] uppercase text-espresso/70">Drop In</span>
+          <span class="w-11 h-11 rounded-full border border-espresso/18 grid place-items-center text-espresso group-hover:bg-forest group-hover:text-ivory group-hover:border-forest transition-all duration-500">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a href="#reserve" class="event-row group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 py-7 border-b border-espresso/12 reveal"
+         data-img="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80">
+        <div class="flex items-center gap-5 sm:w-[220px] shrink-0">
+          <p class="font-display text-[30px] sm:text-[36px] text-terra leading-none tabular">29<span class="text-[15px] align-super ml-1 font-sans tracking-[.16em]">JUN</span></p>
+          <p class="text-espresso/55 text-[11px] tracking-[.18em] uppercase">Sunday · 10:00 AM</p>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-display text-[22px] sm:text-[27px] text-espresso leading-tight transition-colors duration-400 group-hover:text-terra">Ceramics &amp; Coffee Workshop</h3>
+          <p class="text-espresso/62 text-[14px] leading-[1.8] mt-1.5 max-w-[520px]">Hand-build your own cup with Studio Terra, then brew in it. Materials and brunch included.</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="px-4 py-2 rounded-full border border-espresso/18 text-[10px] tracking-[.18em] uppercase text-espresso/70">₹1,400</span>
+          <span class="w-11 h-11 rounded-full border border-espresso/18 grid place-items-center text-espresso group-hover:bg-forest group-hover:text-ivory group-hover:border-forest transition-all duration-500">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="flex flex-wrap items-center gap-4 mt-10 reveal">
+      <a href="#reserve" class="btn btn-sweep inline-flex items-center gap-2.5 bg-terra text-white px-7 py-4 rounded-full text-[11px] font-semibold tracking-[.18em] uppercase">
+        Reserve an Event Seat
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#visit" class="inline-flex items-center gap-2.5 px-7 py-4 rounded-full border border-espresso/20 text-[11px] font-semibold tracking-[.18em] uppercase text-espresso hover:bg-espresso hover:text-ivory transition-colors duration-400">
+        View Full Calendar
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="event-float" id="eventFloat"><img id="eventFloatImg" src="" alt="" class="w-full h-full object-cover"></div>
+
+<!-- ======================= GALLERY ======================= -->
+<section id="gallery" class="relative py-24 sm:py-28 bg-cream/45">
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+      <div class="max-w-[660px]">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="w-9 h-[1.5px] bg-terra"></span>
+          <p class="kicker text-terra">Gallery</p>
+        </div>
+        <h2 class="font-display text-espresso text-[clamp(2.35rem,5.6vw,4.35rem)] leading-[1.03] tracking-[-0.022em] split-words">
+          A little look <em class="italic text-terra">inside</em>.
+        </h2>
+      </div>
+      <p class="text-espresso/70 text-[15.5px] leading-[1.85] max-w-[380px] reveal">
+        Interiors, coffee, plates and the small details that make MUSE &amp; MINT feel like MUSE &amp; MINT.
+        Tag us to be featured.
+      </p>
+    </div>
+
+    <div class="masonry mt-12">
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80" alt="Café interior with plants"><figcaption>Green Corner</figcaption></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Latte art"><figcaption>House Latte</figcaption></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80" alt="Brunch plate"><figcaption>Weekend Brunch</figcaption></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80" alt="Café seating"><figcaption>Evening Tables</figcaption></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=80" alt="Pastries"><figcaption>Morning Bake</figcaption></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=80" alt="Coffee bar"><figcaption>The Coffee Bar</figcaption></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80" alt="Coffee on table"><figcaption>Slow Mornings</figcaption></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Warm restaurant interior"><figcaption>After Hours</figcaption></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80" alt="Café window light"><figcaption>Morning Light</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TESTIMONIALS ======================= -->
+<section class="relative py-24 sm:py-28 overflow-hidden">
+  <div class="absolute left-1/2 -translate-x-1/2 -top-10 w-[900px] h-[380px] bg-cream/55 organic-blob -z-10"></div>
+
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-[720px] mx-auto">
+      <div class="flex items-center justify-center gap-3 mb-6 reveal">
+        <span class="w-9 h-[1.5px] bg-terra"></span>
+        <p class="kicker text-terra">Kind Words</p>
+        <span class="w-9 h-[1.5px] bg-terra"></span>
+      </div>
+      <h2 class="font-display text-espresso text-[clamp(2.35rem,5.4vw,4.05rem)] leading-[1.05] tracking-[-0.022em] split-words">
+        Loved by the <em class="italic text-terra">neighbourhood</em>.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 sm:gap-8 mt-14">
+
+      <figure class="lift reveal bg-white rounded-[24px] p-8 border border-espresso/8">
+        <div class="flex items-center gap-1 text-brass">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <blockquote class="font-display text-[19px] sm:text-[21px] leading-[1.6] text-espresso mt-6">
+          “I came in for a quick coffee and stayed for four hours. The Pistachio Rose Latte is
+          genuinely the best thing I've had in Jubilee Hills this year.”
+        </blockquote>
+        <figcaption class="flex items-center gap-4 mt-8">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Ananya R." class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <p class="font-semibold text-espresso text-[14.5px]">Ananya Reddy</p>
+            <p class="text-espresso/55 text-[11.5px] tracking-[.14em] uppercase mt-1">Interior Designer</p>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="lift reveal bg-forest text-ivory rounded-[24px] p-8">
+        <div class="flex items-center gap-1 text-brass">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <blockquote class="font-display text-[19px] sm:text-[21px] leading-[1.6] mt-6">
+          “The space is beautiful without trying too hard. I've written half of my book here —
+          the team knows my order before I reach the counter.”
+        </blockquote>
+        <figcaption class="flex items-center gap-4 mt-8">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="Karan M." class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <p class="font-semibold text-[14.5px]">Karan Mehta</p>
+            <p class="text-ivory/60 text-[11.5px] tracking-[.14em] uppercase mt-1">Writer &amp; Editor</p>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="lift reveal bg-white rounded-[24px] p-8 border border-espresso/8">
+        <div class="flex items-center gap-1 text-brass">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <blockquote class="font-display text-[19px] sm:text-[21px] leading-[1.6] text-espresso mt-6">
+          “Weekend brunch here is a ritual now. The Malabar avocado toast and that cardamom
+          cheesecake — we drive across the city for both.”
+        </blockquote>
+        <figcaption class="flex items-center gap-4 mt-8">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80" alt="Sara I." class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <p class="font-semibold text-espresso text-[14.5px]">Sara Iqbal</p>
+            <p class="text-espresso/55 text-[11.5px] tracking-[.14em] uppercase mt-1">Product Manager</p>
+          </div>
+        </figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= LOYALTY — MUSE MILES ======================= -->
+<section class="relative py-24 sm:py-28 bg-forest text-ivory overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.14]" style="background-image:url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;"></div>
+  <div class="absolute inset-0" style="background:linear-gradient(115deg,#14342A 20%,rgba(20,52,42,.86) 55%,rgba(29,74,56,.92))"></div>
+
+  <div class="relative max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+      <div>
+        <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full border border-brass/40 bg-brass/10 reveal">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C29B54" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><path d="M8.2 12.5 7 22l5-3 5 3-1.2-9.5"/></svg>
+          <span class="kicker text-brass">Loyalty Programme</span>
+        </div>
+
+        <h2 class="font-display text-[clamp(2.5rem,6vw,4.85rem)] leading-[1.0] tracking-[-0.025em] mt-7 split-words">
+          MUSE <em class="italic text-brass">MILES</em>
+        </h2>
+
+        <p class="text-ivory/75 text-[16px] sm:text-[18px] leading-[1.85] mt-7 reveal">
+          Every visit earns miles. Every 100 miles brings you a little closer to your next
+          coffee, bake or plate on us — no cards to carry, no points to chase.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 mt-9 reveal">
+          <a href="#reserve" class="btn btn-sweep inline-flex items-center gap-2.5 bg-brass text-forest px-8 py-[18px] rounded-full text-[11px] font-semibold tracking-[.2em] uppercase hover:bg-ivory">
+            Join Muse Miles
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="text-ivory/62 text-[12.5px] tracking-[.12em] uppercase">Free to join · Instant rewards</span>
+        </div>
+      </div>
+
+      <div class="space-y-5">
+        <div class="lift reveal rounded-[20px] border border-ivory/16 bg-white/6 p-7">
+          <div class="flex items-start gap-5">
+            <p class="font-display text-[28px] text-brass leading-none tabular">01</p>
+            <div>
+              <h3 class="font-display text-[21px] leading-tight">Scan &amp; Earn</h3>
+              <p class="text-ivory/68 text-[14px] leading-[1.8] mt-2">Get 1 mile for every ₹100 you spend — dine-in, takeaway or delivery.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lift reveal rounded-[20px] border border-ivory/16 bg-white/6 p-7">
+          <div class="flex items-start gap-5">
+            <p class="font-display text-[28px] text-brass leading-none tabular">02</p>
+            <div>
+              <h3 class="font-display text-[21px] leading-tight">Unlock Rewards</h3>
+              <p class="text-ivory/68 text-[14px] leading-[1.8] mt-2">100 miles = a free coffee. 250 miles = a dessert. 500 miles = a full café plate.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lift reveal rounded-[20px] border border-ivory/16 bg-white/6 p-7">
+          <div class="flex items-start gap-5">
+            <p class="font-display text-[28px] text-brass leading-none tabular">03</p>
+            <div>
+              <h3 class="font-display text-[21px] leading-tight">Member Perks</h3>
+              <p class="text-ivory/68 text-[14px] leading-[1.8] mt-2">Priority event seating, birthday treats, and first access to seasonal menu drops.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-[20px] bg-brass/18 border border-brass/30 p-6 flex items-center gap-5 reveal">
+          <div class="w-14 h-14 rounded-full bg-brass text-forest grid place-items-center shrink-0">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div>
+            <p class="text-ivory text-[14.5px] font-medium">Welcome bonus</p>
+            <p class="text-ivory/70 text-[13px] leading-relaxed mt-1">Sign up today and start with 25 miles already in your account.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= RESERVATION ======================= -->
+<section id="reserve" class="relative py-24 sm:py-28 overflow-hidden">
+  <div class="absolute left-[-160px] top-20 w-[420px] h-[420px] bg-terra/10 organic-blob -z-10"></div>
+  <div class="absolute right-[-120px] bottom-0 w-[380px] h-[380px] bg-cream/70 organic-blob -z-10" style="animation-delay:-7s"></div>
+
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-16">
+
+      <div>
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="w-9 h-[1.5px] bg-terra"></span>
+          <p class="kicker text-terra">Reservations</p>
+        </div>
+        <h2 class="font-display text-espresso text-[clamp(2.35rem,5.6vw,4.35rem)] leading-[1.03] tracking-[-0.022em] split-words">
+          Save yourself a <em class="italic text-terra">seat</em>.
+        </h2>
+        <p class="text-espresso/72 text-[16px] sm:text-[17.5px] leading-[1.85] mt-7 reveal">
+          Whether it's a table for two, a corner for six or a quiet spot to work through the afternoon —
+          tell us what you need and we'll have it ready.
+        </p>
+
+        <div class="img-card rounded-[24px] overflow-hidden mt-9 soft-shadow reveal">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=80" alt="Café table setting" class="w-full h-[300px] sm:h-[360px] object-cover">
+          <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 45%,rgba(20,52,42,.72))"></div>
+          <div class="absolute bottom-0 left-0 p-7">
+            <p class="text-ivory font-display text-[21px] leading-tight">Tables held for 15 minutes</p>
+            <p class="text-ivory/72 text-[13px] mt-1.5">Running late? Just give us a call.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mt-6">
+          <div class="rounded-2xl border border-espresso/12 bg-white/55 p-5 reveal">
+            <p class="kicker text-terra">Large Groups</p>
+            <p class="text-espresso/70 text-[13px] leading-relaxed mt-2">Parties of 8+ — email us at events@museandmint.in</p>
+          </div>
+          <div class="rounded-2xl border border-espresso/12 bg-white/55 p-5 reveal">
+            <p class="kicker text-terra">Private Hire</p>
+            <p class="text-espresso/70 text-[13px] leading-relaxed mt-2">The Green Corner is available for private evenings.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="reveal">
+        <form id="reserveForm" class="bg-white rounded-[26px] p-7 sm:p-9 border border-espresso/8 soft-shadow">
+          <h3 class="font-display text-[24px] text-espresso leading-tight">Book a table</h3>
+          <p class="text-espresso/58 text-[13.5px] mt-2">We'll confirm on WhatsApp within 30 minutes.</p>
+
+          <div class="grid sm:grid-cols-2 gap-4 mt-7">
+            <div>
+              <label class="block text-[11px] tracking-[.16em] uppercase text-espresso/60 mb-2 font-medium" for="rName">Full Name</label>
+              <input id="rName" name="name" type="text" required placeholder="Your name" class="field">
+            </div>
+            <div>
+              <label class="block text-[11px] tracking-[.16em] uppercase text-espresso/60 mb-2 font-medium" for="rPhone">Phone</label>
+              <input id="rPhone" name="phone" type="tel" required placeholder="+91 98765 43210" class="field">
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label class="block text-[11px] tracking-[.16em] uppercase text-espresso/60 mb-2 font-medium" for="rEmail">Email</label>
+            <input id="rEmail" name="email" type="email" required placeholder="you@email.com" class="field">
+          </div>
+
+          <div class="grid sm:grid-cols-3 gap-4 mt-4">
+            <div>
+              <label class="block text-[11px] tracking-[.16em] uppercase text-espresso/60 mb-2 font-medium" for="rDate">Date</label>
+              <input id="rDate" name="date" type="date" required class="field">
+            </div>
+            <div>
+              <label class="block text-[11px] tracking-[.16em] uppercase text-espresso/60 mb-2 font-medium" for="rTime">Time</label>
+              <select id="rTime" name="time" required class="field">
+                <option value="">Select</option>
+                <option>8:00 AM</option><option>9:30 AM</option><option>11:00 AM</option>
+                <option>12:30 PM</option><option>2:00 PM</option><option>4:00 PM</option>
+                <option>6:00 PM</option><option>7:30 PM</option><option>9:00 PM</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] tracking-[.16em] uppercase text-espresso/60 mb-2 font-medium" for="rGuests">Guests</label>
+              <select id="rGuests" name="guests" required class="field">
+                <option value="">Select</option>
+                <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option>
+                <option>4 Guests</option><option>5 Guests</option><option>6 Guests</option><option>7+ Guests</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <p class="block text-[11px] tracking-[.16em] uppercase text-espresso/60 mb-3 font-medium">Seating Preference</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <label class="seat-opt cursor-pointer">
+                <input type="radio" name="seating" value="Indoor" class="sr-only" checked>
+                <div class="flex items-center gap-2.5 px-3.5 py-3 rounded-full border border-espresso/16 text-[11.5px] font-medium text-espresso transition-all duration-300">
+                  <span class="dot w-[7px] h-[7px] rounded-full bg-terra transition-colors duration-300"></span> Indoor
+                </div>
+              </label>
+              <label class="seat-opt cursor-pointer">
+                <input type="radio" name="seating" value="Terrace" class="sr-only">
+                <div class="flex items-center gap-2.5 px-3.5 py-3 rounded-full border border-espresso/16 text-[11.5px] font-medium text-espresso transition-all duration-300">
+                  <span class="dot w-[7px] h-[7px] rounded-full bg-terra transition-colors duration-300"></span> Terrace
+                </div>
+              </label>
+              <label class="seat-opt cursor-pointer">
+                <input type="radio" name="seating" value="Coffee Bar" class="sr-only">
+                <div class="flex items-center gap-2.5 px-3.5 py-3 rounded-full border border-espresso/16 text-[11.5px] font-medium text-espresso transition-all duration-300">
+                  <span class="dot w-[7px] h-[7px] rounded-full bg-terra transition-colors duration-300"></span> Coffee Bar
+                </div>
+              </label>
+              <label class="seat-opt cursor-pointer">
+                <input type="radio" name="seating" value="Quiet Corner" class="sr-only">
+                <div class="flex items-center gap-2.5 px-3.5 py-3 rounded-full border border-espresso/16 text-[11.5px] font-medium text-espresso transition-all duration-300">
+                  <span class="dot w-[7px] h-[7px] rounded-full bg-terra transition-colors duration-300"></span> Quiet Corner
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <label class="block text-[11px] tracking-[.16em] uppercase text-espresso/60 mb-2 font-medium" for="rNotes">Special Requests</label>
+            <textarea id="rNotes" name="notes" rows="3" placeholder="Birthday cake, high chair, window table, allergies..." class="field resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-sweep w-full mt-7 inline-flex items-center justify-center gap-2.5 bg-forest text-ivory py-[18px] rounded-full text-[11px] font-semibold tracking-[.22em] uppercase hover:bg-terra">
+            Book Table
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+
+          <p class="text-espresso/48 text-[11.5px] leading-relaxed mt-4 text-center">
+            By booking you agree to our reservation policy. Tables are held for 15 minutes past the booking time.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= VISIT US ======================= -->
+<section id="visit" class="relative py-24 sm:py-28 bg-paper overflow-hidden">
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+
+      <!-- Map -->
+      <div class="relative rounded-[26px] overflow-hidden min-h-[420px] soft-shadow reveal">
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80" alt="Map area around Jubilee Hills" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(20,52,42,.28),rgba(20,52,42,.72))"></div>
+
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div class="relative">
+            <span class="absolute inset-0 rounded-full bg-terra/45" style="animation:ping 2.4s cubic-bezier(0,0,.2,1) infinite"></span>
+            <span class="relative flex w-14 h-14 rounded-full bg-terra text-white items-center justify-center shadow-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+          </div>
+        </div>
+        <style>@keyframes ping{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(2.6);opacity:0}}</style>
+
+        <div class="absolute bottom-0 left-0 right-0 p-7">
+          <div class="bg-paper/95 rounded-[18px] p-5">
+            <p class="kicker text-terra">Find Us</p>
+            <p class="font-display text-[19px] text-espresso leading-snug mt-2">
+              Road No. 36, Jubilee Hills<br>Hyderabad, Telangana 500033
+            </p>
+            <div class="flex flex-wrap gap-2.5 mt-4">
+              <a href="#" class="btn btn-sweep inline-flex items-center gap-2 bg-forest text-ivory px-5 py-3 rounded-full text-[10.5px] font-semibold tracking-[.16em] uppercase">
+                Get Directions
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+              <a href="#" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-espresso/18 text-[10.5px] font-semibold tracking-[.16em] uppercase text-espresso hover:bg-espresso hover:text-ivory transition-colors duration-400">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                Instagram
+              </a>
+              <a href="tel:+914040001234" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-espresso/18 text-[10.5px] font-semibold tracking-[.16em] uppercase text-espresso hover:bg-espresso hover:text-ivory transition-colors duration-400">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+                Call
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="flex flex-col justify-center">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="w-9 h-[1.5px] bg-terra"></span>
+          <p class="kicker text-terra">Visit Us</p>
+        </div>
+        <h2 class="font-display text-espresso text-[clamp(2.35rem,5.2vw,3.95rem)] leading-[1.04] tracking-[-0.022em] split-words">
+          We're just <em class="italic text-terra">around</em> the corner.
+        </h2>
+
+        <div class="grid sm:grid-cols-2 gap-x-10 gap-y-8 mt-10">
+          <div class="reveal">
+            <p class="kicker text-espresso/45 mb-3">Address</p>
+            <p class="text-espresso text-[15.5px] leading-[1.85]">
+              MUSE &amp; MINT CAFÉ<br>
+              2nd Floor, Road No. 36<br>
+              Jubilee Hills, Hyderabad<br>
+              Telangana 500033
+            </p>
+          </div>
+          <div class="reveal">
+            <p class="kicker text-espresso/45 mb-3">Opening Hours</p>
+            <div class="space-y-2 text-[15px] text-espresso tabular">
+              <div class="flex items-center justify-between border-b border-espresso/10 pb-2">
+                <span class="text-espresso/70">Monday — Friday</span><span class="font-medium">8:00 AM — 11:00 PM</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-espresso/10 pb-2">
+                <span class="text-espresso/70">Saturday</span><span class="font-medium">8:00 AM — 11:30 PM</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-espresso/70">Sunday</span><span class="font-medium">8:00 AM — 11:00 PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <p class="kicker text-espresso/45 mb-3">Contact</p>
+            <div class="space-y-2 text-[15px] text-espresso">
+              <a href="tel:+914040001234" class="block hover:text-terra transition-colors">+91 40 4000 1234</a>
+              <a href="mailto:hello@museandmint.in" class="block hover:text-terra transition-colors">hello@museandmint.in</a>
+              <a href="#" class="block hover:text-terra transition-colors">@museandmint.cafe</a>
+            </div>
+          </div>
+          <div class="reveal">
+            <p class="kicker text-espresso/45 mb-3">Good to Know</p>
+            <ul class="space-y-2 text-[14px] text-espresso/72 leading-relaxed">
+              <li class="flex items-start gap-2.5"><span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-terra shrink-0"></span>Free high-speed Wi-Fi</li>
+              <li class="flex items-start gap-2.5"><span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-terra shrink-0"></span>Wheelchair accessible entrance</li>
+              <li class="flex items-start gap-2.5"><span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-terra shrink-0"></span>Pet-friendly terrace seating</li>
+              <li class="flex items-start gap-2.5"><span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-terra shrink-0"></span>Ample parking on Road No. 36</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4 mt-11 reveal">
+          <a href="#reserve" class="btn btn-sweep inline-flex items-center gap-2.5 bg-terra text-white px-8 py-[18px] rounded-full text-[11px] font-semibold tracking-[.2em] uppercase">
+            Book a Table
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#menu" class="inline-flex items-center gap-2.5 px-8 py-[18px] rounded-full border border-espresso/22 text-[11px] font-semibold tracking-[.2em] uppercase text-espresso hover:bg-espresso hover:text-ivory transition-colors duration-400">
+            View Menu
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="relative bg-forest text-ivory pt-20 pb-10 overflow-hidden">
+  <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[320px] bg-white/4 organic-blob"></div>
+
+  <div class="relative max-w-[1320px] mx-auto px-5 sm:px-8">
+
+    <!-- Newsletter -->
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center pb-14 border-b border-ivory/14">
+      <div>
+        <h2 class="font-display text-[clamp(2rem,4.6vw,3.15rem)] leading-[1.08] tracking-[-0.02em] split-words">
+          Good things, straight to your <em class="italic text-brass">inbox</em>.
+        </h2>
+        <p class="text-ivory/68 text-[15px] leading-[1.8] mt-5 max-w-[480px] reveal">
+          Seasonal menu drops, event invites, brewing notes and the occasional secret discount code.
+          No spam — just good things.
+        </p>
+      </div>
+
+      <form id="newsletterForm" class="reveal">
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input type="email" required placeholder="Enter your email address"
+                 class="flex-1 bg-white/8 border border-ivory/22 rounded-full px-6 py-[18px] text-ivory placeholder-ivory/45 text-[14.5px] outline-none focus:border-brass focus:bg-white/12 transition-all duration-400">
+          <button type="submit" class="btn btn-sweep inline-flex items-center justify-center gap-2.5 bg-brass text-forest px-8 py-[18px] rounded-full text-[11px] font-semibold tracking-[.2em] uppercase whitespace-nowrap hover:bg-ivory">
+            Subscribe
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <p class="text-ivory/45 text-[11.5px] mt-3.5 pl-2">By subscribing you agree to receive updates from MUSE &amp; MINT CAFÉ.</p>
+      </form>
+    </div>
+
+    <!-- Links -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-12 py-14">
+      <div class="col-span-2 md:col-span-1">
+        <a href="#home" class="flex items-center gap-3 group">
+          <span class="w-11 h-11 rounded-full bg-brass text-forest grid place-items-center font-display text-[16px] transition-transform duration-500 group-hover:rotate-[10deg]">M<span>&amp;</span>M</span>
+          <span>
+            <span class="block font-display text-[20px] font-semibold tracking-tight">MUSE &amp; MINT</span>
+            <span class="block text-[9.5px] tracking-[.3em] uppercase text-brass mt-1">Jubilee Hills · Hyderabad</span>
+          </span>
+        </a>
+        <p class="text-ivory/62 text-[13.5px] leading-[1.85] mt-6 max-w-[280px]">
+          Coffee, conversations &amp; good things. A contemporary neighbourhood café in the heart of Jubilee Hills.
+        </p>
+        <div class="flex items-center gap-3 mt-7">
+          <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-ivory/22 grid place-items-center hover:bg-brass hover:text-forest hover:border-brass transition-all duration-400">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full border border-ivory/22 grid place-items-center hover:bg-brass hover:text-forest hover:border-brass transition-all duration-400">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="WhatsApp" class="w-10 h-10 rounded-full border border-ivory/22 grid place-items-center hover:bg-brass hover:text-forest hover:border-brass transition-all duration-400">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.2-5.5A8.4 8.4 0 1 1 21 11.5z"/><path d="M8.5 9.5c.3 2.5 3.5 5.7 6 6l1.5-1.5-2-1.3-1 .8c-1-.5-2.1-1.6-2.6-2.6l.8-1L10 8z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <p class="kicker text-brass mb-6">Explore</p>
+        <ul class="space-y-3.5">
+          <li><a href="#home" class="text-ivory/72 text-[14px] hover:text-ivory hover:translate-x-1 transition-all duration-300 inline-block">Home</a></li>
+          <li><a href="#story" class="text-ivory/72 text-[14px] hover:text-ivory hover:translate-x-1 transition-all duration-300 inline-block">Our Story</a></li>
+          <li><a href="#space" class="text-ivory/72 text-[14px] hover:text-ivory hover:translate-x-1 transition-all duration-300 inline-block">The Space</a></li>
+          <li><a href="#gallery" class="text-ivory/72 text-[14px] hover:text-ivory hover:translate-x-1 transition-all duration-300 inline-block">Gallery</a></li>
+          <li><a href="#events" class="text-ivory/72 text-[14px] hover:text-ivory hover:translate-x-1 transition-all duration-300 inline-block">Events</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="kicker text-brass mb-6">Menu</p>
+        <ul class="space-y-3.5">
+          <li><a href="#menu" class="text-ivory/72 text-[14px] hover:text-ivory hover:translate-x-1 transition-all duration-300 inline-block">Coffee</a></li>
+          <li><a href="#menu" class="text-ivory/72 text-[14px] hover:text-ivory hover:translate-x-1 transition-all duration-300 inline-block">Matcha &amp; Tea</a></li>
+          <li><a href="#menu" class="text-ivory/72 text-[14px] hover:text-ivory hover:translate-x-1 transition-all duration-300 inline-block">Breakfast &amp; Brunch</a></li>
+          <li><a href="#menu" class="text-ivory/72 text-[14px] hover:text-ivory hover:translate-x-1 transition-all duration-300 inline-block">Café Plates</a></li>
+          <li><a href="#menu" class="text-ivory/72 text-[14px] hover:text-ivory hover:translate-x-1 transition-all duration-300 inline-block">Desserts</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="kicker text-brass mb-6">Visit</p>
+        <ul class="space-y-3.5 text-ivory/72 text-[14px] leading-[1.8]">
+          <li>2nd Floor, Road No. 36<br>Jubilee Hills, Hyderabad<br>Telangana 500033</li>
+          <li><a href="tel:+914040001234" class="hover:text-brass transition-colors">+91 40 4000 1234</a></li>
+          <li><a href="mailto:hello@museandmint.in" class="hover:text-brass transition-colors">hello@museandmint.in</a></li>
+          <li class="pt-1"><a href="#reserve" class="inline-flex items-center gap-2 text-brass font-medium tracking-[.12em] uppercase text-[11px]">
+            Book a Table
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="pt-8 border-t border-ivory/14 flex flex-col sm:flex-row items-center justify-between gap-5">
+      <p class="text-ivory/52 text-[12px] tracking-[.05em] text-center sm:text-left">
+        © <span id="year">2024</span> MUSE &amp; MINT CAFÉ. All rights reserved. Crafted in Jubilee Hills.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
+        <a href="#" class="text-ivory/52 text-[11.5px] tracking-[.14em] uppercase hover:text-brass transition-colors">Privacy</a>
+        <a href="#" class="text-ivory/52 text-[11.5px] tracking-[.14em] uppercase hover:text-brass transition-colors">Terms</a>
+        <a href="#" class="text-ivory/52 text-[11.5px] tracking-[.14em] uppercase hover:text-brass transition-colors">Careers</a>
+        <a href="#" class="text-ivory/52 text-[11.5px] tracking-[.14em] uppercase hover:text-brass transition-colors">Press</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button id="lightboxClose" class="absolute top-6 right-6 w-12 h-12 rounded-full border border-white/30 text-white grid place-items-center hover:bg-white hover:text-forest transition-colors duration-300" aria-label="Close">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <img id="lightboxImg" src="" alt="Gallery image">
+</div>
+
+<!-- Toast -->
+<div id="toast">
+  <span class="w-2 h-2 rounded-full bg-brass"></span>
+  <span id="toastMsg">Added to your order</span>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------------- Year ---------------- */
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------------- Scroll progress ---------------- */
+  const progress = document.getElementById('progress');
+
+  /* ---------------- Navbar ---------------- */
+  const navbar = document.getElementById('navbar');
+  const heroMedia = document.getElementById('heroMedia');
+  const heroSection = document.getElementById('home');
+
+  let ticking = false;
+  function onScroll() {
+    const y = window.scrollY || window.pageYOffset;
+
+    if (progress) {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - window.innerHeight;
+      progress.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+    }
+
+    if (navbar) {
+      if (y > 60) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    }
+
+    if (heroMedia && heroSection && !prefersReduced) {
+      const h = heroSection.offsetHeight;
+      if (y < h) {
+        heroMedia.style.transform = 'scale(1.08) translate3d(0,' + (y * 0.16) + 'px,0)';
+      }
+    }
+
+    // subtle parallax on story images
+    if (!prefersReduced) {
+      document.querySelectorAll('[data-parallax]').forEach(function (el) {
+        const rect = el.getBoundingClientRect();
+        const speed = parseFloat(el.getAttribute('data-parallax')) || 0.05;
+        const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * speed * -1;
+        el.style.transform = 'translate3d(0,' + offset.toFixed(2) + 'px,0)';
+      });
+    }
+
+    // active nav link
+    let current = '';
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach(function (sec) {
+      const top = sec.offsetTop - 140;
+      if (y >= top) current = sec.getAttribute('id');
+    });
+    document.querySelectorAll('#desktopNav .nav-link').forEach(function (link) {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(onScroll);
+    }
+  }, { passive: true });
+  onScroll();
+
+  /* ---------------- Mobile menu ---------------- */
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  function closeMobile() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove('open');
+    menuToggle && menuToggle.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeMobile);
+    });
+
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMobile();
+    });
+  }
+
+  /* ---------------- Kinetic word splitting ---------------- */
+  function splitWords(el) {
+    if (!el || el.dataset.split === '1') return;
+    el.dataset.split = '1';
+
+    const frag = document.createDocumentFragment();
+
+    function process(node, cls) {
+      if (node.nodeType === 3) {
+        const text = node.textContent;
+        text.split(/(\s+)/).forEach(function (token) {
+          if (!token) return;
+          if (/^\s+$/.test(token)) {
+            frag.appendChild(document.createTextNode(' '));
+          } else {
+            const span = document.createElement('span');
+            span.className = 'word' + (cls ? ' ' + cls : '');
+            span.textContent = token;
+            frag.appendChild(span);
+          }
+        });
+      } else if (node.nodeType === 1) {
+        const cls2 = (node.tagName === 'EM') ? 'italic' : (node.className || '');
+        Array.prototype.slice.call(node.childNodes).forEach(function (n) { process(n, cls2); });
+      }
+    }
+
+    Array.prototype.slice.call(el.childNodes).forEach(function (n) { process(n, ''); });
+    el.innerHTML = '';
+    el.appendChild(frag);
+    el.classList.add('split-ready');
+  }
+
+  document.querySelectorAll('.split-words').forEach(splitWords);
+
+  /* ---------------- Reveal on scroll ---------------- */
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const siblings = el.parentElement ? Array.prototype.slice.call(el.parentElement.children) : [];
+          const idx = siblings.indexOf(el);
+          const delay = Math.min(idx * 70, 420);
+          el.style.transitionDelay = delay + 'ms';
+          el.classList.add('is-visible');
+          revealObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+
+    const wordObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const words = entry.target.querySelectorAll('.word');
+          words.forEach(function (w, i) {
+            w.style.transitionDelay = (i * 55) + 'ms';
+            w.classList.add('is-in');
+          });
+          wordObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+
+    document.querySelectorAll('.split-ready').forEach(function (el) { wordObserver.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+    document.querySelectorAll('.word').forEach(function (w) { w.classList.add('is-in'); });
+  }
+
+  /* ---------------- Counters ---------------- */
+  function animateCount(el) {
+    const target = parseFloat(el.getAttribute('data-count')) || 0;
+    const duration = 1500;
+    const start = performance.now();
+    function step(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased).toString();
+      if (p < 1) window.requestAnimationFrame(step);
+      else el.textContent = target.toString();
+    }
+    window.requestAnimationFrame(step);
+  }
+
+  const counters = document.querySelectorAll('.count');
+  if ('IntersectionObserver' in window) {
+    const countObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          countObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (c) { countObserver.observe(c); });
+  } else {
+    counters.forEach(function (c) { c.textContent = c.getAttribute('data-count'); });
+  }
+
+  /* ---------------- Experience rows background ---------------- */
+  document.querySelectorAll('.exp-row').forEach(function (row) {
+    const bg = row.querySelector('.exp-bg');
+    const url = row.getAttribute('data-bg');
+    if (bg && url) bg.style.backgroundImage = 'url(' + url + ')';
+
+    row.addEventListener('click', function () {
+      const wasOpen = row.classList.contains('open');
+      document.querySelectorAll('.exp-row').forEach(function (r) { r.classList.remove('open'); });
+      if (!wasOpen) row.classList.add('open');
+    });
+  });
+
+  /* ---------------- Menu filters ---------------- */
+  const filterBtns = document.querySelectorAll('#menuFilters .chip');
+  const menuItems = document.querySelectorAll('.menu-item');
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      menuItems.forEach(function (item, i) {
+        const cat = item.getAttribute('data-cat');
+        const match = (filter === 'all' || cat === filter);
+        if (match) {
+          item.classList.remove('hide');
+          item.style.transitionDelay = (i * 45) + 'ms';
+          item.classList.add('is-visible');
+        } else {
+          item.style.transitionDelay = '0ms';
+          item.classList.add('hide');
+        }
+      });
+    });
+  });
+
+  /* ---------------- Add to order ---------------- */
+  const toast = document.getElementById('toast');
+  const toastMsg = document.getElementById('toastMsg');
+  const cartCount = document.getElementById('cartCount');
+  let cart = 0;
+  let toastTimer = null;
+
+  function showToast(message) {
+    if (!toast) return;
+    if (toastMsg) toastMsg.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 2600);
+  }
+
+  document.querySelectorAll('.add-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      cart += 1;
+      if (cartCount) {
+        cartCount.textContent = cart.toString();
+        cartCount.classList.add('bump');
+        setTimeout(function () { cartCount.classList.remove('bump'); }, 320);
+      }
+      const name = btn.getAttribute('data-item') || 'Item';
+      showToast(name + ' added to your order');
+
+      const original = btn.textContent;
+      btn.textContent = 'Added ✓';
+      btn.style.background = '#C2643F';
+      btn.style.color = '#fff';
+      btn.style.borderColor = '#C2643F';
+      setTimeout(function () {
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.style.borderColor = '';
+      }, 1300);
+    });
+  });
+
+  const cartBtn = document.getElementById('cartBtn');
+  if (cartBtn) {
+    cartBtn.addEventListener('click', function () {
+      showToast(cart > 0
+        ? cart + ' item' + (cart > 1 ? 's' : '') + ' in your order · show this at the counter'
+        : 'Your order is empty — add something lovely from the menu');
+    });
+  }
+
+  /* ---------------- Gallery lightbox ---------------- */
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.masonry figure').forEach(function (fig) {
+    fig.addEventListener('click', function () {
+      const img = fig.querySelector('img');
+      if (!img || !lightbox || !lightboxImg) return;
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || '';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  /* ---------------- Events hover image ---------------- */
+  const eventFloat = document.getElementById('eventFloat');
+  const eventFloatImg = document.getElementById('eventFloatImg');
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  if (canHover && eventFloat && eventFloatImg) {
+    document.querySelectorAll('.event-row').forEach(function (row) {
+      row.addEventListener('mouseenter', function () {
+        const src = row.getAttribute('data-img');
+        if (src) {
+          eventFloatImg.src = src;
+          eventFloat.classList.add('show');
+        }
+      });
+      row.addEventListener('mouseleave', function () {
+        eventFloat.classList.remove('show');
+      });
+      row.addEventListener('mousemove', function (e) {
+        eventFloat.style.left = e.clientX + 'px';
+        eventFloat.style.top = e.clientY + 'px';
+      });
+    });
+  }
+
+  /* ---------------- Forms ---------------- */
+  const reserveForm = document.getElementById('reserveForm');
+  if (reserveForm) {
+    reserveForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('rName');
+      const name = nameInput ? nameInput.value.trim().split(' ')[0] : '';
+      showToast('Thank you' + (name ? ', ' + name : '') + ' — your table request has been received');
+      reserveForm.reset();
+    });
+
+    const dateInput = document.getElementById('rDate');
+    if (dateInput) {
+      const today = new Date();
+      const iso = today.toISOString().split('T')[0];
+      dateInput.setAttribute('min', iso);
+    }
+  }
+
+  const newsletterForm = document.getElementById('newsletterForm');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      showToast('You\'re on the list — good things are coming');
+      newsletterForm.reset();
+    });
+  }
+
+  /* ---------------- Magnetic buttons ---------------- */
+  if (canHover && !prefersReduced) {
+    document.querySelectorAll('.btn').forEach(function (btn) {
+      btn.addEventListener('mousemove', function (e) {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = 'translate(' + (x * 0.16).toFixed(2) + 'px,' + (y * 0.22 - 3).toFixed(2) + 'px)';
+      });
+      btn.addEventListener('mouseleave', function () {
+        btn.style.transform = '';
+      });
+    });
+
+    /* Card tilt on signature / menu cards */
+    document.querySelectorAll('.lift').forEach(function (card) {
+      card.addEventListener('mousemove', function (e) {
+        const rect = card.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width - 0.5;
+        const py = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = 'translateY(-8px) rotateX(' + (-py * 4).toFixed(2) + 'deg) rotateY(' + (px * 4).toFixed(2) + 'deg)';
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.transform = '';
+      });
+    });
+  }
+
+  /* ---------------- Smooth anchor offset for older browsers ---------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      const id = anchor.getAttribute('href');
+      if (!id || id === '#' || id.length < 2) return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.pageYOffset - 88;
+      window.scrollTo({ top: top, behavior: prefersReduced ? 'auto' : 'smooth' });
+    });
+  });
+
+  /* ---------------- Refresh observer states after load ---------------- */
+  window.addEventListener('load', function () {
+    onScroll();
+    // Ensure any element already in viewport becomes visible
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.92) {
+        el.classList.add('is-visible');
+      }
+    });
+    document.querySelectorAll('.split-ready').forEach(function (el) {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.92) {
+        el.querySelectorAll('.word').forEach(function (w, i) {
+          w.style.transitionDelay = (i * 55) + 'ms';
+          w.classList.add('is-in');
+        });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
